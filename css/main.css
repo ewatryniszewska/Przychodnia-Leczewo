@@ -1,0 +1,37 @@
+body, html {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 30px;
+    background: rgb(0,0,68);
+    background: linear-gradient(143deg, rgba(0,0,68,0.9) 5%, rgba(0,0,68,1) 97%);
+}
+
+header img {
+    max-width: 200px;
+    display: block;
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 27px;
+}
+
+main {
+    width: 1500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 150px;
+    padding: 20px;
+    background: rgb(238,238,238);
+    background: linear-gradient(143deg, rgba(238,238,238,1) 5%, rgba(199,199,199,1) 97%);
+    border-radius: 7px;
+}
+
+.clear {
+    clear: both;
+}
