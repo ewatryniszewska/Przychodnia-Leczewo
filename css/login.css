@@ -1,6 +1,4 @@
 body {
-    /* background: rgb(2, 0, 36); */
-    /* background: linear-gradient(90deg, rgba(2, 0, 36, 0.5) 0%, rgba(32, 32, 99, 0.4) 35%, rgba(51, 172, 196, 0.4) 100%); */
     background-image: url('../images/bg.jpg');
     background-position: bottom center;
     background-repeat: repeat-x;
@@ -49,4 +47,10 @@ h1 {
     background: linear-gradient(90deg, rgba(51, 172, 196, 0.883) 10%, rgba(32, 32, 99, 0.897) 68%, rgba(2, 0, 36, 0.9023984593837535) 94%);
     border: 0;
     color: white;
+}
+
+.form-check {
+    text-align: right;
+    margin-top: -5px;
+    margin-bottom: 7px;
 }

@@ -17,7 +17,7 @@
 <body>
     <div id="container">
         <?php if (isset($_SESSION["komunikat"])) : ?>
-            <div class="alert alert-light alert-dismissible fade show" role="alert">
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
                 <?php echo $_SESSION["komunikat"]; ?>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -34,6 +34,12 @@
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" name="haslo" id="haslo" placeholder="Hasło">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="true" id="admin" name="admin">
+                <label class="form-check-label" for="admin">
+                    Zaloguj jako administrator
+                </label>
             </div>
             <button type="submit" class="btn">Zaloguj</button>
         </form>

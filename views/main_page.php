@@ -30,7 +30,7 @@
             <p>Koronawirus jest bardzo groźny! Uważaj, żeby na niego nie nadepnąć.</p>
         </article>
     </main>
-    <div class="clea"></div>
+    <div class="clear"></div>
     <footer>
         <section class="left">
             <p>Kontakt: zero osiemset pińćset pińćset</p>

@@ -1,0 +1,28 @@
+body, html {
+    margin: 0;
+}
+
+.alert {
+    margin: 10px;
+}
+
+nav.navbar p {
+    margin-right: 20px;
+    margin-top: 18px;
+}
+
+main {
+    padding: 30px;
+}
+
+main h1, main p {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons span {
+    margin: 0 20px;
+}
