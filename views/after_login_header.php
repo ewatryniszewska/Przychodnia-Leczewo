@@ -26,6 +26,7 @@
     <?php endif; ?>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="./"><img class="logo" src="images/logo.png"></a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link <?php echo ($active == 'main' ? 'active' : ''); ?>" href="patient.php">Najbliższe wizyty</a>

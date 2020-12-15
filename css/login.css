@@ -49,8 +49,40 @@ h1 {
     color: white;
 }
 
+.link {
+    display: block;
+    float: left;
+    width: 50%;
+    margin-top: -5px;
+    margin-bottom: 7px;
+}
+
 .form-check {
+    display: block;
+    float: left;
+    width: 50%;
     text-align: right;
     margin-top: -5px;
     margin-bottom: 7px;
+}
+
+.register .form-group {
+    margin-bottom: 2px;
+}
+
+.register label {
+    margin: -3px 0 -4px 8px;
+}
+
+.register .btn {
+    margin-top: 10px;
+}
+
+
+.register .form-group {
+    margin-bottom: 2px;
+}
+
+.register input {
+    margin-top: -2px;
 }

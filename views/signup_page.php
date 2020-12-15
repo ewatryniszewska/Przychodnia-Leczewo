@@ -24,36 +24,44 @@
                 </button>
             </div>
         <?php endif; ?>
-        <form class="needs-validation" action="signup.php" method="POST" novalidate>
+        <form class="needs-validation register" action="signup.php" method="POST" novalidate>
             <div>
-                <img id="logo" src="images/logo.png">
+                <a href="./"><img id="logo" src="images/logo.png"></a>
                 <h1>Rejestracja</h1>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="imie" id="imie" placeholder="Imię" required>
+                <label for="imie">Imię</label>
+                <input type="text" class="form-control" name="imie" id="imie" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="nazwisko" id="nazwisko" placeholder="Nazwisko" required>
+                <label for="nazwisko">Nazwisko</label>
+                <input type="text" class="form-control" name="nazwisko" id="nazwisko" required>
             </div>
             <div class="form-group">
-                <input type="date" class="form-control" name="data_ur" id="data_ur" placeholder="Data urodzenia" required>
+                <label for="data_ur">Data urodzenia</label>
+                <input type="date" class="form-control" name="data_ur" id="data_ur" required>
             </div>
             <div class="form-group">
-                <input type="int" class="form-control" name="pesel" id="pesel" placeholder="Pesel" required pattern="\d{11}">
+                <label for="data_ur">Pesel</label>
+                <input type="int" class="form-control" name="pesel" id="pesel" required pattern="\d{11}">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="miasto" id="miasto" placeholder="Miasto" required>
+                <label for="adres">Adres zamieszkania</label>
+                <input type="text" class="form-control" name="adres" id="adres" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="adres" id="adres" placeholder="Adres" required>
+                <label for="miasto">Miasto</label>
+                <input type="text" class="form-control" name="miasto" id="miasto" required>
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                <label for="email">Adres e-mail</label>
+                <input type="email" class="form-control" name="email" id="email" required>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="haslo" id="haslo" placeholder="Hasło" required>
+                <label for="haslo">Hasło</label>
+                <input type="password" class="form-control" name="haslo" id="haslo" required pattern=".{8,}">
             </div>
-            <button type="submit" class="btn">Zarejestruj się</button>
+            <button type="submit" class="btn register">Zarejestruj się</button>
         </form>
     </div>
 

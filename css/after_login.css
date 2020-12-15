@@ -11,6 +11,11 @@ nav.navbar p {
     margin-top: 18px;
 }
 
+.logo {
+    height: 48px;
+    margin-right: 30px;
+}
+
 main {
     padding: 30px;
 }

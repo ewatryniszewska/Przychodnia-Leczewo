@@ -26,7 +26,7 @@
         <?php endif; ?>
         <form action="login.php" method="POST">
             <div>
-                <img id="logo" src="images/logo.png">
+                <a href="./"><img id="logo" src="images/logo.png"></a>
                 <h1>Logowanie</h1>
             </div>
             <div class="form-group">
@@ -34,6 +34,9 @@
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" name="haslo" id="haslo" placeholder="Hasło">
+            </div>
+            <div class="link">
+                Nie masz jeszcze konta? <a href="signup.php">Stwórz nowe!</a>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="true" id="admin" name="admin">

@@ -16,29 +16,49 @@
 
 <body>
     <header>
-        <img src="images/logo_white.png">
-        <nav>
-            <button class="btn btn-light" onclick="document.location='login.php'">Zaloguj się</button>
-            <button class="btn btn-outline-light" onclick="document.location='signup.php'">Zarejestruj się</button>
+        <a href="./"><img src="images/logo_white.png"></a>
+        <nav class="right">
+            <?php if($is_patient || $is_admin): ?>
+                <button class="btn btn-outline-light"
+                        onclick="document.location='<?php echo (($is_admin ? 'admin' : 'patient') . '.php'); ?>'">
+                    Przejdź do panelu
+                </button>
+            <?php else: ?>
+                <button class="btn btn-light" onclick="document.location='login.php'">Zaloguj się</button>
+                <button class="btn btn-outline-light" onclick="document.location='signup.php'">Zarejestruj się</button>
+            <?php endif; ?>
+        </nav>
+        <nav class="left">
+            <button class="btn btn-link" onclick="alert('to tylko demo')">Informacje dla pacjentów</button>
+            <button class="btn btn-link" onclick="alert('to tylko demo')">Obsługa firm</button>
+            <button class="btn btn-link" onclick="alert('to tylko demo')">Usługi</button>
         </nav>
         <div class="clear"></div>
     </header>
+    <div class="big-photo" id="photo1">
+    </div>
     <div class="clear"></div>
     <main>
         <article>
             <h3>Uważaj na Koronawirusa!</h3>
             <p>Koronawirus jest bardzo groźny! Uważaj, żeby na niego nie nadepnąć.</p>
         </article>
+        <article>
+            <h3>Ogłoszenie przychodni Leczewo</h3>
+            <p>Szanowni Państwo,</p>
+            <p>Zawiadamiamy, że nasza przychodnia jest dla ludzi!</p>
+        </article>
     </main>
     <div class="clear"></div>
     <footer>
         <section class="left">
             <p>Kontakt: zero osiemset pińćset pińćset</p>
+            <p>Pomoc w nagłych przypadkach: 112</p>
             <p>Adres: Pod Papugami 1, Gdańsk</p>
         </section>
         <section class="right">
             <p>&copy; by Przychodnia "Leczewo" niespółka z o. o.</p>
-            <p>Projekt & Wykonanie: Ewa Tryniszewska</p>
+            <p><b>Projekt & Wykonanie: Ewa Tryniszewska</b></p>
         </section>
     </footer>
 </body>
