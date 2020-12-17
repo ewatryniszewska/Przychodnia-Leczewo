@@ -28,11 +28,24 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a href="./"><img class="logo" src="images/logo.png"></a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link <?php echo ($active == 'main' ? 'active' : ''); ?>" href="patient.php">Najbliższe wizyty</a>
-                <a class="nav-item nav-link <?php echo ($active == 'visits' ? 'active' : ''); ?>" href="patient.php?visits">Wszystkie wizyty</a>
-                <a class="nav-item nav-link <?php echo ($active == 'set_visit' ? 'active' : ''); ?>" href="patient.php?set_visit">Umów wizytę</a>
-            </div>
+            <?php if (isset($pid)) : ?>
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link <?php echo ($active == 'main' ? 'active' : ''); ?>" href="patient.php">Najbliższe wizyty</a>
+                    <a class="nav-item nav-link <?php echo ($active == 'visits' ? 'active' : ''); ?>" href="patient.php?visits">Wszystkie wizyty</a>
+                    <a class="nav-item nav-link <?php echo ($active == 'set_visit' ? 'active' : ''); ?>" href="patient.php?set_visit">Umów wizytę</a>
+                </div>
+                <?php else : if (isset($aid)) : ?>
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link <?php echo ($active == 'main' ? 'active' : ''); ?>" href="admin.php">Podsumowanie</a>
+                        <a class="nav-item nav-link <?php echo ($active == 'doctors' ? 'active' : ''); ?>" href="admin.php?doctors">Lekarze</a>
+                        <a class="nav-item nav-link <?php echo ($active == 'patients' ? 'active' : ''); ?>" href="admin.php?patients">Pacjenci</a>
+                        <a class="nav-item nav-link <?php echo ($active == 'visits' ? 'active' : ''); ?>" href="admin.php?visits">Wizyty</a>
+                        <a class="nav-item nav-link <?php echo ($active == 'registrations' ? 'active' : ''); ?>" href="admin.php?registrations">Rejestracje</a>
+                    </div>
+            <?php
+                endif;
+            endif;
+            ?>
         </div>
 
         <?php if ($name) : ?>

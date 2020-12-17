@@ -1,34 +1,49 @@
 <?php
 require_once('utils/data_base.php');
-
-session_start();
+require_once('utils/is_authorized.php');
 
 class Login
 {
     public function __construct()
     {
         $this->db = new DataBase();
+        $this->ia = new IsAuthorized();
     }
 
     public function load_login_page()
     {
-        if (isset($_SESSION["zalogowano"])) {
-            header('Location: patient.php'); // pacjent czy admin
+        if ($this->ia->is_patient()) {
+            header('Location: patient.php');
+            exit();
+        }
+
+        if ($this->ia->is_admin()) {
+            header('Location: admin.php');
             exit();
         }
 
         require_once('views/login_page.php');
-        unset($_SESSION["komunikat"]);
     }
 
     public function log_in($post)
     {
-        $user_id = $this->db->check_patient($post['email'], $post['haslo']); //tylko pacjenci?
+        if (isset($post['admin']) && $post['admin']) {
+            $admin_id = $this->db->check_admin($post['email'], $post['haslo']);
 
-        if ($user_id) {
-            $_SESSION["pacjent"] = $user_id;
+            if ($admin_id) {
+                $_SESSION["admin"] = $admin_id;
+            }
+        } else {
+            $patient_id = $this->db->check_patient($post['email'], $post['haslo']);
+
+            if ($patient_id) {
+                $_SESSION["pacjent"] = $patient_id;
+            }
+        }
+
+        if ((isset($patient_id) && $patient_id) || (isset($admin_id) && $admin_id)) {
             $_SESSION["komunikat"] = "Prawidłowo zalogowano.";
-            header('Location: patient.php');
+            header('Location: ' . (isset($admin_id) && $admin_id ? 'admin.php' : 'patient.php'));
         } else {
             $_SESSION["komunikat"] = "Nieprawidłowe dane logowania.";
             header("Location: login.php");

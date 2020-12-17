@@ -31,3 +31,12 @@ main h1, main p {
 .buttons span {
     margin: 0 20px;
 }
+
+.card h3 {
+    text-align: center;
+}
+
+.right {
+    display: block;
+    float: right;
+}

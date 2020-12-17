@@ -16,6 +16,7 @@ class Patient
     {
         $active = "main";
         $name = $this->patient_name;
+        $pid = $this->pid;
         $visits = $this->db->get_visits($this->pid, true, false, 3);
         require_once('views/patient_main.php');
     }
@@ -24,6 +25,7 @@ class Patient
     {
         $active = "visits";
         $name = $this->patient_name;
+        $pid = $this->pid;
         $future_visits = $this->db->get_visits($this->pid, true, false);
         $past_visits = $this->db->get_visits($this->pid, false, true);
         require_once('views/patient_visits.php');
@@ -33,6 +35,7 @@ class Patient
     {
         $active = "set_visit";
         $name = $this->patient_name;
+        $pid = $this->pid;
         require_once('views/patient_set_visit.php');
     }
 

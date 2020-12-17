@@ -4,7 +4,7 @@
 
 <?php if ($visits) : ?>
     <h2>Twoje najbliższe wizyty:</h2>
-    <?php include('views/visits_table.php'); ?>
+    <?php include('views/patient_visits_table.php'); ?>
 <?php else : ?>
     <p>Nie masz umówionych wizyt.</p>
     <div class="buttons">
